@@ -1,7 +1,7 @@
 # RQT Real Estate
 
 # 1. Purposes:
->  A Website and Software about real estate to help users and clients find their dream house that integrate many advanced Front-End, Back-End, and AI Technologies. 
+>  A RQT (Real Estate - Quality - Technology) Website and Software about real estate to help users and clients find their dream house that integrate many advanced Front-End, Back-End, and AI Technologies. 
 
 
 # 2.Technologies:

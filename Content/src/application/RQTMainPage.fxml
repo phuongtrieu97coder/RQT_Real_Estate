@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPageController">
+   <children>
+      <AnchorPane id="topNavigationBar_anchorPane1" fx:id="topNavigationBar_anchorPane1" prefHeight="410.0" prefWidth="800.0">
+         <children>
+            <BorderPane id="topNavigationBar1" fx:id="topNavigationBar1" prefHeight="62.0" prefWidth="800.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <Label id="topNav1_MiddleLogo" fx:id="topNav1_MiddleLogo" text="RQT" textFill="#08dcfc" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </center>
+               <left>
+                  <HBox id="topNav1_leftContainer" fx:id="topNav1_leftContainer" prefHeight="64.0" prefWidth="246.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ComboBox id="topNav1_leftContainer_dropdownMenu" fx:id="topNav1_leftContainer_dropdownMenu" prefHeight="47.0" prefWidth="141.0" promptText="Menu" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </left>
+               <right>
+                  <BorderPane id="topNav1_rightContainer" fx:id="topNav1_rightContainer" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <right>
+                        <MenuBar id="topNav1_rightContainer_menuBar" fx:id="topNav1_rightContainer_menuBar" BorderPane.alignment="CENTER">
+                          <menus>
+                            <Menu id="topNav1_rightContainer_menuBar_signUp_butt" fx:id="topNav1_rightContainer_menuBar_signUp_butt" mnemonicParsing="false" text="Sign Up">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                              </items>
+                            </Menu>
+                            <Menu id="topNav1_rightContainer_menuBar_signUp_butt" fx:id="topNav1_rightContainer_menuBar_help_butt" mnemonicParsing="false" text="Help">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                              </items>
+                            </Menu>
+                          </menus>
+                        </MenuBar>
+                     </right>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </BorderPane>
+               </right>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -23,7 +23,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("RQTMainPage"), 1280, 960);
         stage.setScene(scene);
-        scene.getStylesheets().add("src/application/Css_Src/topNavigationBar1.css");
+        scene.getStylesheets().add(getClass().getResource("Css_Src/topNavigationBar1.css").toExternalForm());
         
         stage.setTitle("RQT Real Estate");
         stage.show();

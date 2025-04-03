@@ -6,37 +6,42 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 
+import javafx.scene.layout.BorderPane;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
 
-/*
- * First, make sure any box in fxml file contains these attributes syntaxes
- *  xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="application.MainPageController">
- * */
 public class Main extends Application {
 
     private static Scene scene;
+    private static BorderPane borderPane1;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("RQTMainPage"), 1280, 960);
+    	
+    	borderPane1 = new BorderPane();
+    	borderPane1.setTop(loadFXML("TopNavigationBarFXML"));
+    	borderPane1.getStylesheets().add(getClass().getResource("MainPageScene/TopNavigationBar/topNavigationBar1.css").toExternalForm());
+    	
+        scene = new Scene(borderPane1, 1280, 960);
         stage.setScene(scene);
-        scene.getStylesheets().add(getClass().getResource("Css_Src/topNavigationBar1.css").toExternalForm());
         
         stage.setTitle("RQT Real Estate");
         stage.show();
     }
 
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+    //static void setRoot(String fxml) throws IOException {
+    static void setRoot() throws IOException {
+      //scene.setRoot(loadFXML(fxml));
+        scene.setRoot(borderPane1);
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("MainPageScene/TopNavigationBar/"+fxml + ".fxml"));
         return fxmlLoader.load();
     }
+    
 
     public static void main(String[] args) {
         launch();

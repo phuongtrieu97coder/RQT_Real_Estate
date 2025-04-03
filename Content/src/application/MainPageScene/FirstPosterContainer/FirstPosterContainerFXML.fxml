@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPageScene.FirstPosterContainer.FirstPosterContainerController">
+   <children>
+      <ImageView id="firstPosterContainer_firstPosterImage" fx:id="firstPosterContainer_firstPosterImage" fitHeight="373.0" fitWidth="824.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/FirstPosterContainer_img1.png" />
+         </image>
+      </ImageView>
+      <Rectangle id="firstPosterContainer_firstPosterImage_grayscaleBox" fx:id="firstPosterContainer_firstPosterImage_grayscaleBox" arcHeight="5.0" arcWidth="5.0" fill="#36464452" height="371.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+   </children>
+</StackPane>

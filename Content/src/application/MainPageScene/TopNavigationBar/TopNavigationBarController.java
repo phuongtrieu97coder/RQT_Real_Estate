@@ -1,4 +1,4 @@
-package application;
+package application.MainPageScene.TopNavigationBar;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
@@ -14,7 +14,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 
 
-public class MainPageController{
+public class TopNavigationBarController{
 	@FXML
 	AnchorPane topNavigationBar_anchorPane1;
 	

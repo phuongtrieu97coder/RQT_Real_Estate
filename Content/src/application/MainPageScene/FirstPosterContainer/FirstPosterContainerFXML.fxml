@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPageScene.FirstPosterContainer.FirstPosterContainerController">
    <children>
@@ -12,6 +21,92 @@
             <Image url="@Images/FirstPosterContainer_img1.png" />
          </image>
       </ImageView>
-      <Rectangle id="firstPosterContainer_firstPosterImage_grayscaleBox" fx:id="firstPosterContainer_firstPosterImage_grayscaleBox" arcHeight="5.0" arcWidth="5.0" fill="#36464452" height="371.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <Rectangle id="firstPosterContainer_firstPosterImage_grayscaleBox" fx:id="firstPosterContainer_firstPosterImage_grayscaleBox" arcHeight="5.0" arcWidth="5.0" fill="#3645436f" height="371.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label alignment="CENTER" style="-fx-font-weight: bold; -fx-font-family: Verdana;" text="The #1 AI site real estate professionals trust" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Glow level="0.74" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label alignment="CENTER" style="-fx-font-weight: bold; -fx-font-family: Verdana;" text="What is your dream house? How can we help?" textFill="#00ff7d">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Glow level="0.74" />
+               </effect>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="130.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 35px;">
+               <children>
+                  <TextArea prefHeight="114.0" prefWidth="490.0" promptText="Ask anything" style="-fx-background-color: white;" wrapText="true">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextArea>
+                  <BorderPane prefHeight="46.0" prefWidth="530.0">
+                     <left>
+                        <ButtonBar prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: black; -fx-background-radius: 30px;" BorderPane.alignment="CENTER">
+                           <buttons>
+                              <ImageView fitHeight="28.0" fitWidth="24.0" onMouseClicked="#sendMessageFunc" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/send.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </buttons>
+                           <padding>
+                              <Insets bottom="5.0" right="10.0" top="5.0" />
+                           </padding>
+                        </ButtonBar>
+                     </left>
+                     <right>
+                        <ButtonBar prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 30px;" BorderPane.alignment="CENTER">
+                           <buttons>
+                              <ImageView fitHeight="36.0" fitWidth="28.0" onMouseClicked="#sendMessageFunc" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/voice-message.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </buttons>
+                           <padding>
+                              <Insets bottom="5.0" right="10.0" top="5.0" />
+                           </padding>
+                        </ButtonBar>
+                     </right>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </BorderPane>
+               </children>
+               <VBox.margin>
+                  <Insets left="120.0" right="120.0" top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="4.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
    </children>
 </StackPane>

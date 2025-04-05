@@ -38,7 +38,7 @@ public class Main extends Application {
     	borderPane1.getStylesheets().add(getClass().getResource("MainPageScene/TopNavigationBar/TopNavigationBar1.css").toExternalForm());
     	borderPane1.getStylesheets().add(getClass().getResource("MainPageScene/FirstPosterContainer/FirstPosterContainer.css").toExternalForm());
     	
-        scene = new Scene(borderPane1, 1280, 960);
+        scene = new Scene(borderPane1);
         stage.setScene(scene);
         
         stage.setTitle("RQT Real Estate");

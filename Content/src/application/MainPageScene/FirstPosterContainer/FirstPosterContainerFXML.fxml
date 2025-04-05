@@ -22,9 +22,9 @@
          </image>
       </ImageView>
       <Rectangle id="firstPosterContainer_firstPosterImage_grayscaleBox" fx:id="firstPosterContainer_firstPosterImage_grayscaleBox" arcHeight="5.0" arcWidth="5.0" fill="#3645436f" height="371.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+      <VBox id="firstPosterContainer_VBox1" fx:id="firstPosterContainer_VBox1" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
          <children>
-            <Label alignment="CENTER" style="-fx-font-weight: bold; -fx-font-family: Verdana;" text="The #1 AI site real estate professionals trust" textFill="WHITE">
+            <Label id="firstPosterContainer_VBox1_Label1" fx:id="firstPosterContainer_VBox1_Label1" alignment="CENTER" style="-fx-font-weight: bold; -fx-font-family: Verdana;" text="The #1 AI site real estate professionals trust" textFill="WHITE">
                <font>
                   <Font size="27.0" />
                </font>
@@ -38,7 +38,7 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </Label>
-            <Label alignment="CENTER" style="-fx-font-weight: bold; -fx-font-family: Verdana;" text="What is your dream house? How can we help?" textFill="#00ff7d">
+            <Label id="firstPosterContainer_VBox1_Label2" fx:id="firstPosterContainer_VBox1_Label2" alignment="CENTER" style="-fx-font-weight: bold; -fx-font-family: Verdana;" text="What is your dream house? How can we help?" textFill="#00ff7d">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -49,9 +49,9 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <VBox prefHeight="130.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 35px;">
+            <VBox id="firstPosterContainer_VBox1_Chatbot_VBox_Container" fx:id="firstPosterContainer_VBox1_Chatbot_VBox_Container" prefHeight="130.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 35px;">
                <children>
-                  <TextArea prefHeight="114.0" prefWidth="490.0" promptText="Ask anything" style="-fx-background-color: white;" wrapText="true">
+                  <TextArea id="firstPosterContainer_VBox1_Chatbot_VBox_Container_TextArea1" fx:id="firstPosterContainer_VBox1_Chatbot_VBox_Container_TextArea1" prefHeight="80.0" prefWidth="523.0" promptText="Ask anything or Describe how your dream house may look like.        Our AI agent is here 24/7 to help you" style="-fx-background-color: white;" wrapText="true">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -59,11 +59,11 @@
                         <Insets />
                      </VBox.margin>
                   </TextArea>
-                  <BorderPane prefHeight="46.0" prefWidth="530.0">
+                  <BorderPane id="firstPosterContainer_VBox1_Chatbot_VBox_Container_BorderPane1_Buttons_Container" fx:id="firstPosterContainer_VBox1_Chatbot_VBox_Container_BorderPane1_Buttons_Container" prefHeight="46.0" prefWidth="530.0">
                      <left>
-                        <ButtonBar prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: black; -fx-background-radius: 30px;" BorderPane.alignment="CENTER">
+                        <ButtonBar id="firstPosterContainer_VBox1_Chatbot_VBox_Container_BorderPane1_Buttons_Container_ButtonBar1" fx:id="firstPosterContainer_VBox1_Chatbot_VBox_Container_BorderPane1_Buttons_Container_ButtonBar1" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: black; -fx-background-radius: 30px;" BorderPane.alignment="CENTER">
                            <buttons>
-                              <ImageView fitHeight="28.0" fitWidth="24.0" onMouseClicked="#sendMessageFunc" pickOnBounds="true" preserveRatio="true">
+                              <ImageView id="firstPosterContainer_VBox1_Chatbot_VBox_Container_BorderPane1_Buttons_Container_ButtonBar1_ImageView1" fx:id="firstPosterContainer_VBox1_Chatbot_VBox_Container_BorderPane1_Buttons_Container_ButtonBar1_ImageView1" fitHeight="22.0" fitWidth="18.0" onMouseClicked="#sendMessageFunc" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Images/send.png" />
                                  </image>
@@ -78,9 +78,9 @@
                         </ButtonBar>
                      </left>
                      <right>
-                        <ButtonBar prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 30px;" BorderPane.alignment="CENTER">
+                        <ButtonBar id="firstPosterContainer_VBox1_Chatbot_VBox_Container_BorderPane1_Buttons_Container_ButtonBar2" fx:id="firstPosterContainer_VBox1_Chatbot_VBox_Container_BorderPane1_Buttons_Container_ButtonBar2" prefHeight="37.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 30px;" BorderPane.alignment="CENTER">
                            <buttons>
-                              <ImageView fitHeight="36.0" fitWidth="28.0" onMouseClicked="#sendMessageFunc" pickOnBounds="true" preserveRatio="true">
+                              <ImageView id="firstPosterContainer_VBox1_Chatbot_VBox_Container_BorderPane1_Buttons_Container_ButtonBar1_ImageView2" fx:id="firstPosterContainer_VBox1_Chatbot_VBox_Container_BorderPane1_Buttons_Container_ButtonBar1_ImageView2" fitHeight="31.0" fitWidth="27.0" onMouseClicked="#sendMessageFunc" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Images/voice-message.png" />
                                  </image>

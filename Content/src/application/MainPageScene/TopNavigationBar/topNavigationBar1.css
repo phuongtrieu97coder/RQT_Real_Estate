@@ -1,2 +1,17 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
+#topNav1_leftContainer_dropdownMenu_butt:hover{
+	-fx-border-color:aqua;
+	-fx-border-width:0.5px;
+	-fx-border-style:solid;
+}
+#topNav1_rightContainer_HBox_SignIn_Butt:hover{
+	-fx-border-color:aqua;
+	-fx-border-width:0.5px;
+	-fx-border-style:solid;
+}
+#topNav1_rightContainer_HBox_Help_Butt:hover{
+	-fx-border-color:aqua;
+	-fx-border-width:0.5px;
+	-fx-border-style:solid;
+}

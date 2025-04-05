@@ -11,7 +11,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 
 import javafx.scene.image.ImageView;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
@@ -29,7 +28,10 @@ public class TopNavigationBarController{
 	HBox topNav1_leftContainer;
 	
 	@FXML
-	ComboBox<String> topNav1_leftContainer_dropdownMenu;
+	Button topNav1_leftContainer_dropdownMenu_butt;
+	
+	@FXML
+	HBox topNav1_leftContainer_dropdownMenu_butt_HBox;
 	
 	@FXML
 	ImageView topNav1_MiddleLogo;
@@ -39,13 +41,13 @@ public class TopNavigationBarController{
 	BorderPane topNav1_rightContainer;
 	
 	@FXML
-	MenuBar topNav1_rightContainer_menuBar;
+	HBox topNav1_rightContainer_HBox;
 	
 	@FXML
-	Menu topNav1_rightContainer_menuBar_signIn_butt;
+	Button topNav1_rightContainer_HBox_SignIn_Butt;
 	
 	@FXML
-	Menu topNav1_rightContainer_menuBar_help_butt;
+	Button topNav1_rightContainer_HBox_Help_Butt;
 	
 	
 	

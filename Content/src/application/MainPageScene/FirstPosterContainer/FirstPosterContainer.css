@@ -1,1 +1,15 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#firstPosterContainer_VBox1_Chatbot_VBox_Container_BorderPane1_Buttons_Container_ButtonBar1:hover{
+	-fx-border-color:blue;
+	-fx-border-width:2px;
+	-fx-border-style:solid;
+	-fx-border-radius:30px;
+}
+
+#firstPosterContainer_VBox1_Chatbot_VBox_Container_BorderPane1_Buttons_Container_ButtonBar2:hover{
+	-fx-border-color:blue;
+	-fx-border-width:2px;
+	-fx-border-style:solid;
+	-fx-border-radius:30px;
+}

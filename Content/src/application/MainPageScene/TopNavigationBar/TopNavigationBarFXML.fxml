@@ -10,142 +10,254 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPageScene.TopNavigationBar.TopNavigationBarController">
+
+<AnchorPane id="topNavigationBar_anchorPane1" fx:id="topNavigationBar_anchorPane1" prefHeight="152.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPageScene.TopNavigationBar.TopNavigationBarController">
    <children>
-      <AnchorPane id="topNavigationBar_anchorPane1" fx:id="topNavigationBar_anchorPane1" prefHeight="170.0" prefWidth="800.0">
+      <BorderPane id="topNavigationBar1" fx:id="topNavigationBar1" prefHeight="66.0" prefWidth="800.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <HBox id="topNav1_leftContainer" fx:id="topNav1_leftContainer" prefHeight="64.0" prefWidth="246.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Button id="topNav1_leftContainer_dropdownMenu_butt" fx:id="topNav1_leftContainer_dropdownMenu_butt" mnemonicParsing="false" onAction="#show_topNavigationBar_anchorPane1_dropdownMenuTab" style="-fx-background-color: white;">
+                     <graphic>
+                        <HBox id="topNav1_leftContainer_dropdownMenu_butt_HBox" fx:id="topNav1_leftContainer_dropdownMenu_butt_HBox" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/Menu.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Menu">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/downArrow.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </graphic>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX">
+                           <color>
+                              <Color opacity="0.10030395537614822" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </left>
+         <center>
+            <ImageView id="topNav1_MiddleLogo" fx:id="topNav1_MiddleLogo" fitHeight="48.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../CompanyLogo/RQT_Company_Logo.png" />
+               </image>
+            </ImageView>
+         </center>
+         <right>
+            <HBox id="topNav1_rightContainer_HBox" fx:id="topNav1_rightContainer_HBox" alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="264.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="topNav1_rightContainer_HBox_SignIn_Butt" fx:id="topNav1_rightContainer_HBox_SignIn_Butt" mnemonicParsing="false" prefWidth="136.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <HBox prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="35.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/logIn.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="Sign-In">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX">
+                           <color>
+                              <Color opacity="0.09118536114692688" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="topNav1_rightContainer_HBox_Help_Butt" fx:id="topNav1_rightContainer_HBox_Help_Butt" mnemonicParsing="false" prefHeight="46.0" prefWidth="108.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <HBox prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="44.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/helpDeskIcon.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="Help">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX">
+                           <color>
+                              <Color opacity="0.09726439416408539" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </right>
+      </BorderPane>
+      <HBox id="topNavigationBar_anchorPane1_dropdownMenuTab" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab" layoutY="70.0" prefHeight="78.0" prefWidth="800.0" style="-fx-background-color: white;">
          <children>
-            <BorderPane id="topNavigationBar1" fx:id="topNavigationBar1" prefHeight="62.0" prefWidth="800.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <left>
-                  <HBox id="topNav1_leftContainer" fx:id="topNav1_leftContainer" prefHeight="64.0" prefWidth="246.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                     <children>
-                        <Button id="topNav1_leftContainer_dropdownMenu_butt" fx:id="topNav1_leftContainer_dropdownMenu_butt" mnemonicParsing="false" style="-fx-background-color: white;">
-                           <graphic>
-                              <HBox id="topNav1_leftContainer_dropdownMenu_butt_HBox" fx:id="topNav1_leftContainer_dropdownMenu_butt_HBox" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: white;">
-                                 <children>
-                                    <ImageView fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@Images/Menu.png" />
-                                       </image>
-                                    </ImageView>
-                                    <Label text="Menu">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets left="5.0" right="5.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                    <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@Images/downArrow.png" />
-                                       </image>
-                                       <HBox.margin>
-                                          <Insets top="5.0" />
-                                       </HBox.margin>
-                                    </ImageView>
-                                 </children>
-                              </HBox>
-                           </graphic>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX">
-                                 <color>
-                                    <Color opacity="0.10030395537614822" />
-                                 </color>
-                              </DropShadow>
-                           </effect>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </HBox>
-               </left>
-               <center>
-                  <ImageView id="topNav1_MiddleLogo" fx:id="topNav1_MiddleLogo" fitHeight="48.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@../CompanyLogo/RQT_Company_Logo.png" />
-                     </image></ImageView>
-               </center>
-               <right>
-                  <HBox id="topNav1_rightContainer_HBox" fx:id="topNav1_rightContainer_HBox" alignment="CENTER_RIGHT" prefHeight="62.0" prefWidth="244.0" BorderPane.alignment="CENTER">
-                     <children>
-                        <Button id="topNav1_rightContainer_HBox_SignIn_Butt" fx:id="topNav1_rightContainer_HBox_SignIn_Butt" mnemonicParsing="false" prefWidth="136.0" style="-fx-background-color: white;">
-                           <graphic>
-                              <HBox prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: white;">
-                                 <children>
-                                    <ImageView fitHeight="35.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@Images/logIn.png" />
-                                       </image>
-                                       <HBox.margin>
-                                          <Insets right="5.0" />
-                                       </HBox.margin>
-                                    </ImageView>
-                                    <Label text="Sign-In">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                           </graphic>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX">
-                                 <color>
-                                    <Color opacity="0.09118536114692688" />
-                                 </color>
-                              </DropShadow>
-                           </effect>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                        <Button id="topNav1_rightContainer_HBox_Help_Butt" fx:id="topNav1_rightContainer_HBox_Help_Butt" mnemonicParsing="false" prefHeight="46.0" prefWidth="108.0" style="-fx-background-color: white;">
-                           <graphic>
-                              <HBox prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: white;">
-                                 <children>
-                                    <ImageView fitHeight="44.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@Images/helpDeskIcon.png" />
-                                       </image>
-                                       <HBox.margin>
-                                          <Insets right="5.0" />
-                                       </HBox.margin>
-                                    </ImageView>
-                                    <Label text="Help">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                           </graphic>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX">
-                                 <color>
-                                    <Color opacity="0.09726439416408539" />
-                                 </color>
-                              </DropShadow>
-                           </effect>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                     <BorderPane.margin>
-                        <Insets />
-                     </BorderPane.margin>
-                  </HBox>
-               </right>
-            </BorderPane>
+            <HBox id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1" alignment="CENTER" prefHeight="78.0" prefWidth="778.0" style="-fx-background-color: white;">
+               <children>
+                  <Button id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Buy_Butt" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Buy_Butt" mnemonicParsing="false" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/buyHouse.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Rent_Butt" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Rent_Butt" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/rentHouse.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Sell_Butt" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Sell_Butt" layoutX="80.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/sellHome.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Loan_Butt" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Loan_Butt" layoutX="140.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="49.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/loanHouse.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Agents_Butt" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Agents_Butt" layoutX="468.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: white;">
+                     <graphic>
+                        <HBox prefHeight="44.0" prefWidth="115.0">
+                           <children>
+                              <ImageView fitHeight="68.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/agent.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label prefHeight="30.0" prefWidth="69.0" text="Agents">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_News_Butt" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_News_Butt" layoutX="402.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="49.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/newspaper.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <Button id="topNavigationBar_anchorPane1_dropdownMenuTab_Close_Butt" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab_Close_Butt" alignment="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="34.0" text="X" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
          </children>
-      </AnchorPane>
+      </HBox>
    </children>
-</StackPane>
+</AnchorPane>

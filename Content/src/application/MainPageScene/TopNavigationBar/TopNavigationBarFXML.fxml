@@ -146,7 +146,7 @@
             </HBox>
          </right>
       </BorderPane>
-      <HBox id="topNavigationBar_anchorPane1_dropdownMenuTab" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab" layoutY="70.0" prefHeight="78.0" prefWidth="800.0" style="-fx-background-color: white;" visible="false">
+      <HBox id="topNavigationBar_anchorPane1_dropdownMenuTab" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab" layoutY="70.0" prefHeight="78.0" prefWidth="800.0" style="-fx-background-color: white;">
          <children>
             <HBox id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1" alignment="CENTER" prefHeight="78.0" prefWidth="778.0" style="-fx-background-color: white;">
                <children>

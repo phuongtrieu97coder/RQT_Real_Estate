@@ -50,6 +50,44 @@ public class TopNavigationBarController{
 	Button topNav1_rightContainer_HBox_Help_Butt;
 	
 	
+	@FXML
+	HBox topNavigationBar_anchorPane1_dropdownMenuTab;
+	
+	@FXML
+	HBox topNavigationBar_anchorPane1_dropdownMenuTab_HBox1;
+	
+	@FXML
+	Button topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Buy_Butt;
+	
+	@FXML
+	Button topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Rent_Butt;
+	
+	@FXML
+	Button topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Sell_Butt;
+	
+	@FXML
+	Button topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Loan_Butt;
+	
+	@FXML
+	Button topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_Agents_Butt;
+	
+	@FXML
+	Button topNavigationBar_anchorPane1_dropdownMenuTab_HBox1_News_Butt;
+	
+	@FXML
+	Button topNavigationBar_anchorPane1_dropdownMenuTab_Close_Butt;
+	
+	public void initialize() {
+		topNavigationBar_anchorPane1_dropdownMenuTab.setVisible(false);
+		topNavigationBar_anchorPane1.getChildren().remove(topNavigationBar_anchorPane1_dropdownMenuTab);
+	}
+	
+	@FXML
+	public void show_topNavigationBar_anchorPane1_dropdownMenuTab() throws IOException{
+		topNavigationBar_anchorPane1_dropdownMenuTab.setVisible(true);
+		System.out.println("Welcome");
+		topNavigationBar_anchorPane1.getChildren().add(topNavigationBar_anchorPane1_dropdownMenuTab);
+	}
 	
 	
 }

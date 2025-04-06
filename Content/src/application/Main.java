@@ -10,6 +10,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.HBox;
 
+import javafx.scene.control.ScrollPane;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
@@ -18,7 +20,8 @@ public class Main extends Application {
 
     private static Scene scene;
     private static BorderPane borderPane1;
-    private static VBox borderPane1_centerContainer;
+    private static ScrollPane borderPane1_centerContainer_ScrollPane_Control;
+    private static VBox borderPane1_centerContainer_ScrollPane_Control_VBox;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -27,12 +30,21 @@ public class Main extends Application {
     	borderPane1.setTop(loadFXML("MainPageScene/TopNavigationBar/","TopNavigationBarFXML"));
     	
     	
+    	borderPane1_centerContainer_ScrollPane_Control_VBox = new VBox();
     	
-    	borderPane1_centerContainer = new VBox();
+    	borderPane1_centerContainer_ScrollPane_Control_VBox.getChildren().add(loadFXML("MainPageScene/FirstPosterContainer/","FirstPosterContainerFXML"));
     	
-    	borderPane1_centerContainer.getChildren().add(loadFXML("MainPageScene/FirstPosterContainer/","FirstPosterContainerFXML"));
+
+    	borderPane1_centerContainer_ScrollPane_Control = new ScrollPane(borderPane1_centerContainer_ScrollPane_Control_VBox);
     	
-    	borderPane1.setCenter(borderPane1_centerContainer);
+    	// Set preferred size for the ScrollPane
+    	borderPane1_centerContainer_ScrollPane_Control.setPrefWidth(800);
+    	borderPane1_centerContainer_ScrollPane_Control.setPrefHeight(600);
+    	
+    	// Configure scroll behavior
+    	borderPane1_centerContainer_ScrollPane_Control.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+    	
+    	borderPane1.setCenter(borderPane1_centerContainer_ScrollPane_Control);
     	
     	
     	borderPane1.getStylesheets().add(getClass().getResource("MainPageScene/TopNavigationBar/TopNavigationBar1.css").toExternalForm());

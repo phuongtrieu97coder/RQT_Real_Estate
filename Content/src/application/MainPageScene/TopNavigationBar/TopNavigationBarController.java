@@ -84,9 +84,20 @@ public class TopNavigationBarController{
 	
 	@FXML
 	public void show_topNavigationBar_anchorPane1_dropdownMenuTab() throws IOException{
-		topNavigationBar_anchorPane1_dropdownMenuTab.setVisible(true);
-		System.out.println("Welcome");
-		topNavigationBar_anchorPane1.getChildren().add(topNavigationBar_anchorPane1_dropdownMenuTab);
+		if(topNavigationBar_anchorPane1_dropdownMenuTab.isVisible()==false) {
+			topNavigationBar_anchorPane1.getChildren().add(topNavigationBar_anchorPane1_dropdownMenuTab);
+			topNavigationBar_anchorPane1_dropdownMenuTab.setVisible(true);
+		}else {
+			topNavigationBar_anchorPane1.getChildren().remove(topNavigationBar_anchorPane1_dropdownMenuTab);
+			topNavigationBar_anchorPane1_dropdownMenuTab.setVisible(false);
+		}
+	}
+	@FXML
+	public void close_topNavigationBar_anchorPane1_dropdownMenuTab() throws IOException{
+		if(topNavigationBar_anchorPane1_dropdownMenuTab.isVisible()==true) {
+			topNavigationBar_anchorPane1.getChildren().remove(topNavigationBar_anchorPane1_dropdownMenuTab);
+			topNavigationBar_anchorPane1_dropdownMenuTab.setVisible(false);
+		}
 	}
 	
 	

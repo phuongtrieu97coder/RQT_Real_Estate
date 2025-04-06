@@ -13,8 +13,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="topNavigationBar_anchorPane1" fx:id="topNavigationBar_anchorPane1" prefHeight="152.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPageScene.TopNavigationBar.TopNavigationBarController">
+<AnchorPane id="topNavigationBar_anchorPane1" fx:id="topNavigationBar_anchorPane1" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPageScene.TopNavigationBar.TopNavigationBarController">
    <children>
       <BorderPane id="topNavigationBar1" fx:id="topNavigationBar1" prefHeight="66.0" prefWidth="800.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
@@ -147,7 +146,7 @@
             </HBox>
          </right>
       </BorderPane>
-      <HBox id="topNavigationBar_anchorPane1_dropdownMenuTab" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab" layoutY="70.0" prefHeight="78.0" prefWidth="800.0" style="-fx-background-color: white;">
+      <HBox id="topNavigationBar_anchorPane1_dropdownMenuTab" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab" layoutY="70.0" prefHeight="78.0" prefWidth="800.0" style="-fx-background-color: white;" visible="false">
          <children>
             <HBox id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab_HBox1" alignment="CENTER" prefHeight="78.0" prefWidth="778.0" style="-fx-background-color: white;">
                <children>
@@ -243,7 +242,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </HBox>
-            <Button id="topNavigationBar_anchorPane1_dropdownMenuTab_Close_Butt" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab_Close_Butt" alignment="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="34.0" text="X" textFill="WHITE">
+            <Button id="topNavigationBar_anchorPane1_dropdownMenuTab_Close_Butt" fx:id="topNavigationBar_anchorPane1_dropdownMenuTab_Close_Butt" alignment="CENTER" mnemonicParsing="false" onAction="#close_topNavigationBar_anchorPane1_dropdownMenuTab" prefHeight="27.0" prefWidth="34.0" text="X" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>

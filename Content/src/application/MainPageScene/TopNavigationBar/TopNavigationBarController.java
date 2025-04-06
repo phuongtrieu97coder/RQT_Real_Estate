@@ -11,10 +11,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 
 import javafx.scene.image.ImageView;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
 
+import javafx.animation.TranslateTransition;
+import javafx.animation.FadeTransition;
+
+import javafx.util.Duration;
 
 public class TopNavigationBarController{
 	@FXML
@@ -78,16 +79,33 @@ public class TopNavigationBarController{
 	Button topNavigationBar_anchorPane1_dropdownMenuTab_Close_Butt;
 	
 	public void initialize() {
+		topNavigationBar_anchorPane1_dropdownMenuTab.setTranslateY(-50);
 		topNavigationBar_anchorPane1_dropdownMenuTab.setVisible(false);
 		topNavigationBar_anchorPane1.getChildren().remove(topNavigationBar_anchorPane1_dropdownMenuTab);
 	}
 	
 	@FXML
 	public void show_topNavigationBar_anchorPane1_dropdownMenuTab() throws IOException{
-		if(topNavigationBar_anchorPane1_dropdownMenuTab.isVisible()==false) {
+		TranslateTransition slideTransition = new TranslateTransition(Duration.millis(800), topNavigationBar_anchorPane1_dropdownMenuTab);
+		
+		if(topNavigationBar_anchorPane1_dropdownMenuTab.isVisible()==false &&
+		   topNavigationBar_anchorPane1_dropdownMenuTab.getTranslateY() != 0) {
+			// If the tab is currently up, slide it down
+
+			
+			slideTransition.setToY(0); // Target position (visible area)
+			slideTransition.play();
+			
+			
 			topNavigationBar_anchorPane1.getChildren().add(topNavigationBar_anchorPane1_dropdownMenuTab);
 			topNavigationBar_anchorPane1_dropdownMenuTab.setVisible(true);
 		}else {
+			// If the tab is currently down, slide it up
+
+			slideTransition.setToY(-50); // Target position (visible area)
+			slideTransition.play();
+			
+	        
 			topNavigationBar_anchorPane1.getChildren().remove(topNavigationBar_anchorPane1_dropdownMenuTab);
 			topNavigationBar_anchorPane1_dropdownMenuTab.setVisible(false);
 		}

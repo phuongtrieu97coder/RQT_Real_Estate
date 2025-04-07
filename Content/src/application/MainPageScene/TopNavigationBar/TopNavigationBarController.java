@@ -7,6 +7,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 
@@ -14,7 +15,10 @@ import javafx.scene.image.ImageView;
 
 import javafx.geometry.Insets;
 
-import javafx.animation.TranslateTransition;
+
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 
 import javafx.util.Duration;
 
@@ -48,6 +52,9 @@ public class TopNavigationBarController{
 	
 	
 	@FXML
+	ScrollPane topNavigationBar1_ScrollPane1;
+	
+	@FXML
 	HBox topNavigationBar1_HBox1_Dropdown_Menu_Tab;
 	
 	@FXML
@@ -79,69 +86,63 @@ public class TopNavigationBarController{
 	Button topNavigationBar1_HBox1_Dropdown_Menu_Tab_HBox2_Close_Butt;
 	
 	public void initialize() {
-		topNavigationBar1_HBox1_Dropdown_Menu_Tab.setTranslateY(
-	    -topNavigationBar1_HBox1_Dropdown_Menu_Tab.getHeight());
+		topNavigationBar1_VBox1.getChildren().remove(topNavigationBar1_ScrollPane1);
 		
-		topNavigationBar1_HBox1_Dropdown_Menu_Tab.setVisible(false);
-		topNavigationBar1_VBox1.getChildren().remove(topNavigationBar1_HBox1_Dropdown_Menu_Tab);
 	}
 	
 	@FXML
 	public void show_topNavigationBar1_HBox1_Dropdown_Menu_Tab() throws IOException{
-		TranslateTransition slideTransition = 
-	    new TranslateTransition(Duration.seconds(2), topNavigationBar1_HBox1_Dropdown_Menu_Tab);
 		
 		
-		if(topNavigationBar1_HBox1_Dropdown_Menu_Tab.getTranslateY() == 
-		 -topNavigationBar1_HBox1_Dropdown_Menu_Tab.getHeight()) {
+		if(!topNavigationBar1_VBox1.getChildren().contains(topNavigationBar1_ScrollPane1)) {
+			// If the tab is not already in the VBox, add it to the VBox
+			topNavigationBar1_VBox1.getChildren().add(topNavigationBar1_ScrollPane1);
 			
-			// If the tab is currently up, slide it down, bring it to front, and expand the height of StackPane
-			
-			topNavigationBar1_VBox1.getChildren().add(topNavigationBar1_HBox1_Dropdown_Menu_Tab);
-			
-			slideTransition.setDelay(Duration.seconds(0.2));
-		    
-			topNavigationBar1_HBox1_Dropdown_Menu_Tab.setVisible(true);	
-			
-			slideTransition.setToY(0); // Target position (visible area)
-			slideTransition.play();
-			
+	    	// Configure scroll behavior
+			topNavigationBar1_ScrollPane1.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+	    	
+			//animation effect that slide the tab down by expanding the height of the ScrollPane
+			Timeline timeline = new Timeline();
+		    KeyValue keyValue = new KeyValue(topNavigationBar1_ScrollPane1.prefHeightProperty(), 80);
+		    KeyFrame keyFrame = new KeyFrame(Duration.seconds(0.4), keyValue);
+		    timeline.getKeyFrames().add(keyFrame);
+		    timeline.play();
+			 
 			
 		}else {
+			//animation effect that slide the tab up by shrinking the height of the ScrollPane
 			
-			// If the tab is currently down, slide it up, bring it to back, and shrink the height of the StackPane
+			Timeline timeline2 = new Timeline();
+		    KeyValue keyValue2 = new KeyValue(topNavigationBar1_ScrollPane1.prefHeightProperty(), 0);
+		    KeyFrame keyFrame2 = new KeyFrame(Duration.seconds(0.4), keyValue2);
+		    timeline2.getKeyFrames().add(keyFrame2);
+		    timeline2.play();
 			
-            slideTransition.setToY(-topNavigationBar1_HBox1_Dropdown_Menu_Tab.getHeight());
-            
-            slideTransition.setOnFinished(event -> {
-            	
-            	topNavigationBar1_HBox1_Dropdown_Menu_Tab.setVisible(false);
-            	topNavigationBar1_VBox1.getChildren().remove(topNavigationBar1_HBox1_Dropdown_Menu_Tab);
-            });
-			
-			slideTransition.play();
+		    // Remove the tab from the VBox after the animation is finished
+		    timeline2.setOnFinished(event -> {
+		    	topNavigationBar1_VBox1.getChildren().remove(topNavigationBar1_ScrollPane1);
+		    });
+		    
 			
 		}
+		
+		
 	}
 	@FXML
 	public void close_topNavigationBar1_HBox1_Dropdown_Menu_Tab() throws IOException{
-		TranslateTransition slideTransition2 = new TranslateTransition(Duration.seconds(2), topNavigationBar1_HBox1_Dropdown_Menu_Tab);
-		
-		
-		if(topNavigationBar1_HBox1_Dropdown_Menu_Tab.getTranslateY() == 0) {
-			// If the tab is currently down, slide it up, bring it to back, and shrink the height of the StackPane
 
-			
-			slideTransition2.setToY(-topNavigationBar1_HBox1_Dropdown_Menu_Tab.getHeight());
-
-			 slideTransition2.setOnFinished(event -> {
-	            	
-            	topNavigationBar1_HBox1_Dropdown_Menu_Tab.setVisible(false);
-            	topNavigationBar1_VBox1.getChildren().remove(topNavigationBar1_HBox1_Dropdown_Menu_Tab);
-			 });
-			slideTransition2.play();
-			
-		}
+		//animation effect that slide the tab up by shrinking the height of the ScrollPane
+		Timeline timeline = new Timeline();
+	    KeyValue keyValue = new KeyValue(topNavigationBar1_ScrollPane1.prefHeightProperty(), 0);
+	    KeyFrame keyFrame = new KeyFrame(Duration.seconds(0.4), keyValue);
+	    timeline.getKeyFrames().add(keyFrame);
+	    timeline.play();
+		
+	    // Remove the tab from the VBox after the animation is finished
+	    timeline.setOnFinished(event -> {
+	    	topNavigationBar1_VBox1.getChildren().remove(topNavigationBar1_ScrollPane1);
+	    });
+	    
 	}
 	
 	

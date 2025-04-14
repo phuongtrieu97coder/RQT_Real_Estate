@@ -1,4 +1,5 @@
 # RQT Real Estate
+![image](https://github.com/user-attachments/assets/745f05d7-143b-496a-8cc5-5d6391a97967)
 
 # 1. Purposes:
 >  A RQT (Real Estate - Quality - Technology) Website and Software about real estate to help users and clients find their dream house that integrate many advanced Front-End, Back-End, and AI Technologies. 

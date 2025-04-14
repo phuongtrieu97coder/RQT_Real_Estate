@@ -33,6 +33,10 @@ public class Main extends Application {
     	borderPane1_centerContainer_ScrollPane_Control_VBox = new VBox();
     	
     	borderPane1_centerContainer_ScrollPane_Control_VBox.getChildren().add(loadFXML("MainPageScene/FirstPosterContainer/","FirstPosterContainerFXML"));
+    	//borderPane1_centerContainer_ScrollPane_Control_VBox.getChildren().add(loadFXML("MainPageScene/TrendingHomeContainer/","TrendingHomeContainerFXML"));
+    	//borderPane1_centerContainer_ScrollPane_Control_VBox.getChildren().add(loadFXML("MainPageScene/CalculateBudgetContainer/","CalculateBudgetContainerFXML"));
+    	//borderPane1_centerContainer_ScrollPane_Control_VBox.getChildren().add(loadFXML("MainPageScene/AgentsContainer/","AgentsContainerFXML"));
+    	//borderPane1_centerContainer_ScrollPane_Control_VBox.getChildren().add(loadFXML("MainPageScene/BottomNavigationContainer/","BottomNavigationContainerFXML"));
     	
 
     	borderPane1_centerContainer_ScrollPane_Control = new ScrollPane(borderPane1_centerContainer_ScrollPane_Control_VBox);
@@ -49,6 +53,10 @@ public class Main extends Application {
     	
     	borderPane1.getStylesheets().add(getClass().getResource("MainPageScene/TopNavigationBar/TopNavigationBar1.css").toExternalForm());
     	borderPane1.getStylesheets().add(getClass().getResource("MainPageScene/FirstPosterContainer/FirstPosterContainer.css").toExternalForm());
+    	//borderPane1.getStylesheets().add(getClass().getResource("MainPageScene/TrendingHomeContainer/TrendingHomeContainer.css").toExternalForm());
+    	//borderPane1.getStylesheets().add(getClass().getResource("MainPageScene/CalculateBudgetContainer/CalculateBudgetContainer.css").toExternalForm());
+    	//borderPane1.getStylesheets().add(getClass().getResource("MainPageScene/AgentsContainer/AgentsContainer.css").toExternalForm());
+    	//borderPane1.getStylesheets().add(getClass().getResource("MainPageScene/BottomNavigationContainer/BottomNavigationContainer.css").toExternalForm());
     	
         scene = new Scene(borderPane1);
         stage.setScene(scene);
